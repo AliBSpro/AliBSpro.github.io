@@ -12,31 +12,52 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+      
       body, td, th, p {
-        font-family: 'Inter', 'Lato', Verdana, Helvetica, sans-serif; 
+        font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+        color: #333; /* 字体颜色加深，更清晰 */
+        line-height: 1.6;
       }
-      /* 专门为了这个新布局增加的样式 */
-      h1.centered-name {
+      
+      /* 专门模仿 Mingyue Zhang 主页的样式 */
+      .header-container {
         text-align: center;
-        font-size: 36px;
+        padding-top: 40px;
+        padding-bottom: 30px;
+      }
+      
+      h1.name-title {
+        font-size: 38px;
         font-weight: 700;
-        margin-bottom: 10px;
-        color: #000;
+        margin-bottom: 12px;
+        color: #222;
+        letter-spacing: -0.5px;
       }
-      p.centered-info {
-        text-align: center;
+      
+      p.subtitle {
         font-size: 18px;
         color: #444;
         margin: 5px 0;
       }
-      h2.section-title {
-        border-bottom: 1px solid #eee;
-        padding-bottom: 10px;
-        margin-top: 30px;
+
+      h2.section-heading {
+        font-size: 26px;
+        font-weight: 700;
+        margin-top: 10px;
         margin-bottom: 20px;
-        font-size: 24px;
-        font-weight: 600;
+        color: #222;
+      }
+      
+      /* 教育经历的列表样式 */
+      ul.education-list {
+        padding-left: 20px;
+        margin-top: 10px;
+      }
+      
+      ul.education-list li {
+        margin-bottom: 8px;
+        color: #444;
       }
     </style>
   </head>
@@ -46,67 +67,43 @@
       <tr style="padding:0px">
         <td style="padding:0px">
           
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                
-                <div style="text-align: center; margin-bottom: 15px;">
-                   <a href="images/ziye_photo.jpg">
-                    <img src="images/ziye_photo.jpg" style="width:120px; height:120px; border-radius:50%; object-fit:cover; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
-                   </a>
-                </div>
-
-                <h1 class="centered-name">Ziye Deng (邓紫叶)</h1>
-                
-                <p class="centered-info">
-                  Undergraduate Student in Software Engineering
-                </p>
-                <p class="centered-info">
-                  <a href="http://www.swu.edu.cn/" style="color: #000;">Southwest University</a>
-                </p>
-
-                <p style="text-align:center; margin-top: 15px;">
-                  <a href="mailto:zydeng21@163.com">Email</a> &nbsp;/&nbsp;
-                  <a href="data/ZiyeDeng-CV.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/AliBSpro">Github</a>
-                </p>
-
-              </td>
-            </tr>
-          </tbody></table>
+          <div class="header-container">
+            <h1 class="name-title">Ziye Deng (邓紫叶)</h1>
+            
+            <p class="subtitle">
+              Undergraduate Student in Software Engineering
+            </p>
+            
+            <p class="subtitle">
+              Southwest University
+            </p>
+            
+            </div>
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0 20px;width:100%;vertical-align:middle">
                 
-                <h2 class="section-title">About Me</h2>
+                <h2 class="section-heading">About Me</h2>
                 
                 <p>
-                  I am a third-year undergraduate student majoring in Software Engineering at <a href="http://www.swu.edu.cn/">Southwest University</a> (211 Project / Double First Class University), China.
-                </p>
-                <p>
-                  I currently rank <strong>top 5.8%</strong> (8/137) in my major with a GPA of <strong>4.03/5.0</strong>. My research interests lie in <strong>Safe Multi-Agent Reinforcement Learning (Safe MARL)</strong>, <strong>Robot Control</strong>, and <strong>Embodied AI</strong>. I am particularly interested in ensuring safety guarantees for autonomous systems in complex dynamic environments.
+                  I am a third-year undergraduate student at <a href="http://www.swu.edu.cn/" style="color:#0066cc; text-decoration:none;">Southwest University</a>. 
+                  My research interests lie in <strong>Safe Multi-Agent Reinforcement Learning (Safe MARL)</strong>, <strong>Robot Control</strong>, and <strong>Embodied AI</strong>.
                 </p>
                 <p>
                   I am looking for Ph.D. / Master's opportunities starting in <strong>Fall 2027</strong>.
                 </p>
 
-              </td>
-            </tr>
-          </tbody></table>
-
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0 20px;width:100%;vertical-align:middle">
-                
-                <h2 class="section-title">Education</h2>
-                
-                <ul style="padding-left: 20px;">
-                  <li style="margin-bottom: 10px;">
-                    <strong>Southwest University</strong>, Chongqing, China <br>
-                    B.Eng. in Software Engineering, <em>Sept. 2023 - Present</em>
+                <ul class="education-list">
+                  <li>
+                    <strong>B.Eng. in Software Engineering</strong>, Southwest University, 2023 - Present
+                    <br>
+                    <span style="font-size: 0.95em; color: #666;">(GPA: 4.03/5.0, Rank: Top 5.8%)</span>
                   </li>
-                  </ul>
+                  <li>
+                    <strong>Research Intern</strong>, [Research Lab Name if any], 2024 - Present
+                  </li>
+                </ul>
 
               </td>
             </tr>
@@ -115,23 +112,23 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0 20px;width:100%;vertical-align:middle">
-                <h2 class="section-title">Research</h2>
+                <h2 class="section-heading" style="border-bottom: 1px solid #eaeaea; padding-bottom: 10px; margin-top: 40px;">Research</h2>
                 <p>
-                  I'm interested in how to make multi-agent systems not only smart but also <strong>safe</strong> and <strong>reliable</strong>. My current research focuses on combining Control Barrier Functions (CBFs) with Reinforcement Learning.
+                  My current research focuses on combining Control Barrier Functions (CBFs) with Reinforcement Learning to ensure safety for autonomous systems.
                 </p>
               </td>
             </tr>
           </tbody></table>
 
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px 20px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             
-            <tr onmouseout="aamas_stop()" onmouseover="aamas_start()" bgcolor="#ffffd0">
+            <tr onmouseout="aamas_stop()" onmouseover="aamas_start()" bgcolor="#ffffd0" style="border-radius: 10px;">
               <td style="padding:16px;width:25%;vertical-align:middle">
                 <div class="one">
                   <div class="two" id='aamas_image'>
-                    <img src='images/aamas26.png' style="width:100%; height:120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <img src='images/aamas26.png' style="width:100%; height:110px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
                   </div>
-                  <img src='images/aamas26.png' style="width:100%; height:120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                  <img src='images/aamas26.png' style="width:100%; height:110px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
                 </div>
                 <script type="text/javascript">
                   function aamas_start() { document.getElementById('aamas_image').style.opacity = "1"; }
@@ -140,17 +137,19 @@
                 </script>
               </td>
               <td style="padding:8px;width:75%;vertical-align:middle">
-                <a href="data/Safe_MARL_Paper.pdf">
-                  <span class="papertitle">Safe Multi-Agent Reinforcement Learning Through Neural Graph Control Barrier Functions</span>
+                <a href="data/Safe_MARL_Paper.pdf" style="text-decoration: none; color: #000;">
+                  <span class="papertitle" style="font-weight: 600; font-size: 16px;">Safe Multi-Agent Reinforcement Learning Through Neural Graph Control Barrier Functions</span>
                 </a>
                 <br>
-                <strong>Ziye Deng</strong>, [Qiang Li], [Mingyue Zhang*], [Wu Chen*]
-                <br>
-                <em>AAMAS</em>, 2026 (Extended Abstract)
-                <br>
-                <a href="data/Safe_MARL_Paper.pdf">pdf</a> / <a href="#">code</a>
-                <p>
-                We propose <strong>Neural GCBF+</strong>, a framework that ensures safety for large-scale multi-agent systems.
+                <div style="margin-top: 5px; color: #444;">
+                  <strong>Ziye Deng</strong>, [Qiang Li], [Mingyue Zhang*], [Wu Chen*]
+                </div>
+                <div style="font-style: italic; color: #666;">AAMAS 2026 (Extended Abstract)</div>
+                <div style="margin-top: 5px;">
+                   <a href="data/Safe_MARL_Paper.pdf" style="color: #0066cc;">pdf</a> / <a href="#" style="color: #0066cc;">code</a>
+                </div>
+                <p style="font-size: 14px; margin-top: 8px; color: #555;">
+                  We propose <strong>Neural GCBF+</strong>, a framework featuring Zero-QP inference that ensures safety for large-scale multi-agent systems.
                 </p>
               </td>
             </tr>
@@ -159,9 +158,9 @@
               <td style="padding:16px;width:25%;vertical-align:middle">
                 <div class="one">
                   <div class="two" id='uav_image'>
-                    <img src='images/patent.png' style="width:100%; height:120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <img src='images/patent.png' style="width:100%; height:110px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
                   </div>
-                  <img src='images/patent.png' style="width:100%; height:120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                  <img src='images/patent.png' style="width:100%; height:110px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
                 </div>
                 <script type="text/javascript">
                   function uav_start() { document.getElementById('uav_image').style.opacity = "1"; }
@@ -170,34 +169,36 @@
                 </script>
               </td>
               <td style="padding:8px;width:75%;vertical-align:middle">
-                <span class="papertitle">Hardware-Software Collaborative Multi-UAV Formation Control Method and System</span>
+                <span class="papertitle" style="font-weight: 600; font-size: 16px;">Hardware-Software Collaborative Multi-UAV Formation Control</span>
                 <br>
-                <strong>Ziye Deng</strong>, et al.
-                <br>
-                <em>National Invention Patent</em>, 2024
-                <p>
-                Designed a decoupled architecture with high-level policy on CPU and low-level safety shield on FPGA.
+                <div style="margin-top: 5px; color: #444;">
+                  <strong>Ziye Deng</strong>, et al.
+                </div>
+                <div style="font-style: italic; color: #666;">National Invention Patent, 2024</div>
+                <p style="font-size: 14px; margin-top: 8px; color: #555;">
+                  Designed a decoupled architecture with high-level policy on CPU and low-level safety shield on FPGA.
                 </p>
               </td>
             </tr>
+
           </tbody></table>
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0 20px;width:100%;vertical-align:middle">
-                <h2 class="section-title">Selected Projects</h2>
+                <h2 class="section-heading" style="border-bottom: 1px solid #eaeaea; padding-bottom: 10px; margin-top: 30px;">Selected Projects</h2>
               </td>
             </tr>
           </tbody></table>
           
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px 20px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr onmouseout="micro_stop()" onmouseover="micro_start()">
               <td style="padding:16px;width:25%;vertical-align:middle">
                 <div class="one">
                   <div class="two" id='micro_image'>
-                    <img src='images/microservice.png' style="width:100%; height:120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <img src='images/microservice.png' style="width:100%; height:110px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
                   </div>
-                  <img src='images/microservice.png' style="width:100%; height:120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                  <img src='images/microservice.png' style="width:100%; height:110px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
                 </div>
                 <script type="text/javascript">
                   function micro_start() { document.getElementById('micro_image').style.opacity = "1"; }
@@ -206,17 +207,17 @@
                 </script>
               </td>
               <td style="padding:8px;width:75%;vertical-align:middle">
-                <a href="#">
-                  <span class="papertitle">High-Concurrency Microservices Platform</span>
+                <a href="#" style="text-decoration: none; color: #000;">
+                  <span class="papertitle" style="font-weight: 600; font-size: 16px;">High-Concurrency Microservices Platform</span>
                 </a>
                 <br>
-                <strong>Project Leader</strong>
-                <br>
-                <em>Course Project / Competition</em>, 2024
-                <br>
-                <a href="#">code</a>
-                <p>
-                  Designed a scalable microservices architecture using <strong>Spring Cloud Alibaba</strong>.
+                <div style="margin-top: 5px; color: #444;">Project Leader</div>
+                <div style="font-style: italic; color: #666;">Course Project, 2024</div>
+                <div style="margin-top: 5px;">
+                   <a href="#" style="color: #0066cc;">code</a>
+                </div>
+                <p style="font-size: 14px; margin-top: 8px; color: #555;">
+                  Microservices architecture using <strong>Spring Cloud Alibaba</strong>. Capable of handling <strong>10k+ QPS</strong> scenarios.
                 </p>
               </td>
             </tr>
@@ -225,22 +226,22 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0 20px;width:100%;vertical-align:middle">
-                <h2 class="section-title">Honors & Awards</h2>
-                <ul style="padding-left: 20px; list-style-type: none;">
+                <h2 class="section-heading" style="border-bottom: 1px solid #eaeaea; padding-bottom: 10px; margin-top: 30px;">Honors & Awards</h2>
+                <ul style="padding-left: 20px; list-style-type: none; margin-bottom: 50px;">
                   <li style="margin-bottom: 8px; position: relative;">
-                    <span style="position: absolute; left: -20px; color: #666;">•</span>
-                    <strong>2025</strong>: Honorable Mention (H-Prize), Mathematical Contest in Modeling (MCM/ICM)
+                    <span style="position: absolute; left: -20px; color: #888;">•</span>
+                    <strong>2025</strong>: Honorable Mention (H-Prize), MCM/ICM
                   </li>
                   <li style="margin-bottom: 8px; position: relative;">
-                    <span style="position: absolute; left: -20px; color: #666;">•</span>
+                    <span style="position: absolute; left: -20px; color: #888;">•</span>
                     <strong>2025</strong>: Third Prize, Lanqiao Cup
                   </li>
                   <li style="margin-bottom: 8px; position: relative;">
-                    <span style="position: absolute; left: -20px; color: #666;">•</span>
+                    <span style="position: absolute; left: -20px; color: #888;">•</span>
                     <strong>2025</strong>: First Class Scholarship, Southwest University
                   </li>
                   <li style="margin-bottom: 8px; position: relative;">
-                    <span style="position: absolute; left: -20px; color: #666;">•</span>
+                    <span style="position: absolute; left: -20px; color: #888;">•</span>
                     <strong>2024</strong>: Academic Excellence Award, Southwest University
                   </li>
                 </ul>
@@ -252,8 +253,8 @@
             <tr>
               <td style="padding:0px">
                 <br>
-                <p style="text-align:right;font-size:small;">
-                  Template from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron</a>.
+                <p style="text-align:right;font-size:small; color:#999;">
+                  Template from <a href="https://github.com/jonbarron/jonbarron_website" style="color:#999;">Jon Barron</a>.
                 </p>
               </td>
             </tr>
