@@ -11,6 +11,34 @@
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+      body, td, th, p {
+        font-family: 'Inter', 'Lato', Verdana, Helvetica, sans-serif; 
+      }
+      /* 专门为了这个新布局增加的样式 */
+      h1.centered-name {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: #000;
+      }
+      p.centered-info {
+        text-align: center;
+        font-size: 18px;
+        color: #444;
+        margin: 5px 0;
+      }
+      h2.section-title {
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 600;
+      }
+    </style>
   </head>
 
   <body>
@@ -19,38 +47,75 @@
         <td style="padding:0px">
           
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Ziye Deng (邓紫叶)
+            <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                
+                <div style="text-align: center; margin-bottom: 15px;">
+                   <a href="images/ziye_photo.jpg">
+                    <img src="images/ziye_photo.jpg" style="width:120px; height:120px; border-radius:50%; object-fit:cover; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                   </a>
+                </div>
+
+                <h1 class="centered-name">Ziye Deng (邓紫叶)</h1>
+                
+                <p class="centered-info">
+                  Undergraduate Student in Software Engineering
                 </p>
-                <p>
-                  I am a third-year undergraduate student majoring in Software Engineering at <a href="http://www.swu.edu.cn/">Southwest University</a> (211 Project / Double First Class University), China.
+                <p class="centered-info">
+                  <a href="http://www.swu.edu.cn/" style="color: #000;">Southwest University</a>
                 </p>
-                <p>
-                  I currently rank <strong>top 5.8%</strong> (8/137) in my major with a GPA of <strong>4.03/5.0</strong>. My research interests lie in <strong>Safe Multi-Agent Reinforcement Learning (Safe MARL)</strong>, <strong>Robot Control</strong>, and <strong>Embodied AI</strong>. I am particularly interested in ensuring safety guarantees for autonomous systems (like UAV swarms) in complex dynamic environments using control theory and learning-based methods.
-                </p>
-                <p>
-                  I am looking for Ph.D. / Master's opportunities starting in <strong>Fall 2027</strong>.
-                </p>
-                <p style="text-align:center">
+
+                <p style="text-align:center; margin-top: 15px;">
                   <a href="mailto:zydeng21@163.com">Email</a> &nbsp;/&nbsp;
                   <a href="data/ZiyeDeng-CV.pdf">CV</a> &nbsp;/&nbsp;
                   <a href="https://github.com/AliBSpro">Github</a>
                 </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/ziye_photo.jpg">
-                  <img style="width: 200px; height: 200px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" alt="profile photo" src="images/ziye_photo.jpg" class="hoverZoomLink">
-                </a>
+
               </td>
             </tr>
           </tbody></table>
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
+            <tr>
+              <td style="padding:0 20px;width:100%;vertical-align:middle">
+                
+                <h2 class="section-title">About Me</h2>
+                
+                <p>
+                  I am a third-year undergraduate student majoring in Software Engineering at <a href="http://www.swu.edu.cn/">Southwest University</a> (211 Project / Double First Class University), China.
+                </p>
+                <p>
+                  I currently rank <strong>top 5.8%</strong> (8/137) in my major with a GPA of <strong>4.03/5.0</strong>. My research interests lie in <strong>Safe Multi-Agent Reinforcement Learning (Safe MARL)</strong>, <strong>Robot Control</strong>, and <strong>Embodied AI</strong>. I am particularly interested in ensuring safety guarantees for autonomous systems in complex dynamic environments.
+                </p>
+                <p>
+                  I am looking for Ph.D. / Master's opportunities starting in <strong>Fall 2027</strong>.
+                </p>
+
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0 20px;width:100%;vertical-align:middle">
+                
+                <h2 class="section-title">Education</h2>
+                
+                <ul style="padding-left: 20px;">
+                  <li style="margin-bottom: 10px;">
+                    <strong>Southwest University</strong>, Chongqing, China <br>
+                    B.Eng. in Software Engineering, <em>Sept. 2023 - Present</em>
+                  </li>
+                  </ul>
+
+              </td>
+            </tr>
+          </tbody></table>
+
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0 20px;width:100%;vertical-align:middle">
+                <h2 class="section-title">Research</h2>
                 <p>
                   I'm interested in how to make multi-agent systems not only smart but also <strong>safe</strong> and <strong>reliable</strong>. My current research focuses on combining Control Barrier Functions (CBFs) with Reinforcement Learning.
                 </p>
@@ -59,7 +124,7 @@
           </tbody></table>
 
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
+            
             <tr onmouseout="aamas_stop()" onmouseover="aamas_start()" bgcolor="#ffffd0">
               <td style="padding:16px;width:25%;vertical-align:middle">
                 <div class="one">
@@ -69,12 +134,8 @@
                   <img src='images/aamas26.png' style="width:100%; height:120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
                 </div>
                 <script type="text/javascript">
-                  function aamas_start() {
-                    document.getElementById('aamas_image').style.opacity = "1";
-                  }
-                  function aamas_stop() {
-                    document.getElementById('aamas_image').style.opacity = "0";
-                  }
+                  function aamas_start() { document.getElementById('aamas_image').style.opacity = "1"; }
+                  function aamas_stop() { document.getElementById('aamas_image').style.opacity = "0"; }
                   aamas_stop()
                 </script>
               </td>
@@ -83,16 +144,13 @@
                   <span class="papertitle">Safe Multi-Agent Reinforcement Learning Through Neural Graph Control Barrier Functions</span>
                 </a>
                 <br>
-                <strong>Ziye Deng</strong>, 
-                [Qiang Li], [Mingyue Zhang*], [Wu Chen*]
+                <strong>Ziye Deng</strong>, [Qiang Li], [Mingyue Zhang*], [Wu Chen*]
                 <br>
                 <em>AAMAS</em>, 2026 (Extended Abstract)
                 <br>
-                <a href="data/Safe_MARL_Paper.pdf">pdf</a> / 
-                <a href="https://github.com/AliBSpro/项目名">code</a>
-                <p></p>
+                <a href="data/Safe_MARL_Paper.pdf">pdf</a> / <a href="#">code</a>
                 <p>
-                We propose <strong>Neural GCBF+</strong>, a framework that ensures safety for large-scale multi-agent systems. It features a <strong>Zero-QP inference</strong> mechanism that reduces collision rates by <strong>89.4%</strong> while maintaining real-time performance.
+                We propose <strong>Neural GCBF+</strong>, a framework that ensures safety for large-scale multi-agent systems.
                 </p>
               </td>
             </tr>
@@ -106,12 +164,8 @@
                   <img src='images/patent.png' style="width:100%; height:120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
                 </div>
                 <script type="text/javascript">
-                  function uav_start() {
-                    document.getElementById('uav_image').style.opacity = "1";
-                  }
-                  function uav_stop() {
-                    document.getElementById('uav_image').style.opacity = "0";
-                  }
+                  function uav_start() { document.getElementById('uav_image').style.opacity = "1"; }
+                  function uav_stop() { document.getElementById('uav_image').style.opacity = "0"; }
                   uav_stop()
                 </script>
               </td>
@@ -120,27 +174,23 @@
                 <br>
                 <strong>Ziye Deng</strong>, et al.
                 <br>
-                <em>National Invention Patent</em> (Under Substantive Examination), 2024
-                <br>
-                <p></p>
+                <em>National Invention Patent</em>, 2024
                 <p>
-                Designed a decoupled architecture with high-level policy on CPU and low-level safety shield on FPGA. Implemented a <strong>hardware safety projector</strong> with deterministic latency to guarantee flight safety.
+                Designed a decoupled architecture with high-level policy on CPU and low-level safety shield on FPGA.
                 </p>
               </td>
             </tr>
-
           </tbody></table>
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Selected Projects</h2>
+              <td style="padding:0 20px;width:100%;vertical-align:middle">
+                <h2 class="section-title">Selected Projects</h2>
               </td>
             </tr>
           </tbody></table>
-
+          
           <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            
             <tr onmouseout="micro_stop()" onmouseover="micro_start()">
               <td style="padding:16px;width:25%;vertical-align:middle">
                 <div class="one">
@@ -150,17 +200,13 @@
                   <img src='images/microservice.png' style="width:100%; height:120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
                 </div>
                 <script type="text/javascript">
-                  function micro_start() {
-                    document.getElementById('micro_image').style.opacity = "1";
-                  }
-                  function micro_stop() {
-                    document.getElementById('micro_image').style.opacity = "0";
-                  }
+                  function micro_start() { document.getElementById('micro_image').style.opacity = "1"; }
+                  function micro_stop() { document.getElementById('micro_image').style.opacity = "0"; }
                   micro_stop()
                 </script>
               </td>
               <td style="padding:8px;width:75%;vertical-align:middle">
-                <a href="https://github.com/AliBSpro/你的项目仓库名">
+                <a href="#">
                   <span class="papertitle">High-Concurrency Microservices Platform</span>
                 </a>
                 <br>
@@ -168,27 +214,18 @@
                 <br>
                 <em>Course Project / Competition</em>, 2024
                 <br>
-                <a href="https://github.com/AliBSpro/你的项目仓库名">code</a>
-                <p></p>
+                <a href="#">code</a>
                 <p>
-                  Designed a scalable microservices architecture using <strong>Spring Cloud Alibaba</strong>. Implemented service discovery with Nacos, distributed transactions with Seata, and high-concurrency traffic control with Sentinel. Capable of handling <strong>10k+ QPS</strong> scenarios.
+                  Designed a scalable microservices architecture using <strong>Spring Cloud Alibaba</strong>.
                 </p>
               </td>
             </tr>
-
           </tbody></table>
 
-          <table style="width:100%; margin:0 auto; border:0; border-spacing:0; padding:16px;"><tbody>
-            <tr>
-              <td>
-                <h2>Honors & Awards</h2>
-              </td>
-            </tr>
-          </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            
             <tr>
-              <td style="padding:8px;width:100%;vertical-align:middle">
+              <td style="padding:0 20px;width:100%;vertical-align:middle">
+                <h2 class="section-title">Honors & Awards</h2>
                 <ul style="padding-left: 20px; list-style-type: none;">
                   <li style="margin-bottom: 8px; position: relative;">
                     <span style="position: absolute; left: -20px; color: #666;">•</span>
@@ -196,7 +233,7 @@
                   </li>
                   <li style="margin-bottom: 8px; position: relative;">
                     <span style="position: absolute; left: -20px; color: #666;">•</span>
-                    <strong>2025</strong>: Third Prize, Lanqiao Cup National Software and Information Technology Professional Talent Competition (Chongqing)
+                    <strong>2025</strong>: Third Prize, Lanqiao Cup
                   </li>
                   <li style="margin-bottom: 8px; position: relative;">
                     <span style="position: absolute; left: -20px; color: #666;">•</span>
@@ -209,7 +246,6 @@
                 </ul>
               </td>
             </tr>
-
           </tbody></table>
           
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
