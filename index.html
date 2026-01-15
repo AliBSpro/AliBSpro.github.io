@@ -16,14 +16,14 @@
       
       body, td, th, p {
         font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
-        color: #333; /* 字体颜色加深，更清晰 */
+        color: #333;
         line-height: 1.6;
       }
       
-      /* 专门模仿 Mingyue Zhang 主页的样式 */
+      /* 头部纯文字样式 */
       .header-container {
         text-align: center;
-        padding-top: 50px; /* 增加顶部留白 */
+        padding-top: 50px;
         padding-bottom: 30px;
       }
       
@@ -47,9 +47,11 @@
         margin-top: 10px;
         margin-bottom: 20px;
         color: #222;
+        border-bottom: 1px solid #eaeaea; 
+        padding-bottom: 10px;
       }
       
-      /* 教育经历的列表样式 */
+      /* 教育经历列表 */
       ul.education-list {
         padding-left: 20px;
         margin-top: 10px;
@@ -58,6 +60,16 @@
       ul.education-list li {
         margin-bottom: 8px;
         color: #444;
+      }
+
+      /* 图片统一样式 */
+      .project-img {
+        width: 100%; 
+        height: 110px; 
+        object-fit: cover; 
+        border-radius: 6px; 
+        border: 1px solid #eee;
+        transition: opacity 0.3s;
       }
     </style>
   </head>
@@ -69,16 +81,13 @@
           
           <div class="header-container">
             <h1 class="name-title">Ziye Deng (邓紫叶)</h1>
-            
             <p class="subtitle">
               Undergraduate Student in Software Engineering
             </p>
-            
             <p class="subtitle">
               Southwest University
             </p>
-            
-            </div>
+          </div>
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
@@ -100,9 +109,6 @@
                     <br>
                     <span style="font-size: 0.95em; color: #666;">(GPA: 4.03/5.0, Rank: Top 5.8%)</span>
                   </li>
-                  <li>
-                    <strong>Research Intern</strong>, [Research Lab Name if any], 2024 - Present
-                  </li>
                 </ul>
 
               </td>
@@ -112,9 +118,9 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0 20px;width:100%;vertical-align:middle">
-                <h2 class="section-heading" style="border-bottom: 1px solid #eaeaea; padding-bottom: 10px; margin-top: 40px;">Research</h2>
+                <h2 class="section-heading" style="margin-top: 40px;">Research</h2>
                 <p>
-                  My current research focuses on combining Control Barrier Functions (CBFs) with Reinforcement Learning to ensure safety for autonomous systems.
+                  My current research focuses on combining Control Barrier Functions (CBFs) with Reinforcement Learning.
                 </p>
               </td>
             </tr>
@@ -122,13 +128,11 @@
 
           <table style="width:100%;border:0px;border-spacing:0px 20px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             
-            <tr onmouseout="aamas_stop()" onmouseover="aamas_start()" bgcolor="#ffffd0" style="border-radius: 10px;">
+            <tr onmouseout="aamas_stop()" onmouseover="aamas_start()">
               <td style="padding:16px;width:25%;vertical-align:middle">
                 <div class="one">
-                  <div class="two" id='aamas_image'>
-                    <img src='images/aamas26.png' style="width:100%; height:110px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
-                  </div>
-                  <img src='images/aamas26.png' style="width:100%; height:110px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
+                  <div class="two" id='aamas_image'><img src='images/aamas26.png' class="project-img"></div>
+                  <img src='images/aamas26.png' class="project-img">
                 </div>
                 <script type="text/javascript">
                   function aamas_start() { document.getElementById('aamas_image').style.opacity = "1"; }
@@ -145,9 +149,6 @@
                   <strong>Ziye Deng</strong>, [Qiang Li], [Mingyue Zhang*], [Wu Chen*]
                 </div>
                 <div style="font-style: italic; color: #666;">AAMAS 2026 (Extended Abstract)</div>
-                <div style="margin-top: 5px;">
-                   <a href="data/Safe_MARL_Paper.pdf" style="color: #0066cc;">pdf</a> / <a href="#" style="color: #0066cc;">code</a>
-                </div>
                 <p style="font-size: 14px; margin-top: 8px; color: #555;">
                   We propose <strong>Neural GCBF+</strong>, a framework featuring Zero-QP inference that ensures safety for large-scale multi-agent systems.
                 </p>
@@ -157,10 +158,8 @@
             <tr onmouseout="uav_stop()" onmouseover="uav_start()">
               <td style="padding:16px;width:25%;vertical-align:middle">
                 <div class="one">
-                  <div class="two" id='uav_image'>
-                    <img src='images/patent.png' style="width:100%; height:110px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
-                  </div>
-                  <img src='images/patent.png' style="width:100%; height:110px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
+                  <div class="two" id='uav_image'><img src='images/patent.png' class="project-img"></div>
+                  <img src='images/patent.png' class="project-img">
                 </div>
                 <script type="text/javascript">
                   function uav_start() { document.getElementById('uav_image').style.opacity = "1"; }
@@ -186,19 +185,41 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0 20px;width:100%;vertical-align:middle">
-                <h2 class="section-heading" style="border-bottom: 1px solid #eaeaea; padding-bottom: 10px; margin-top: 30px;">Selected Projects</h2>
+                <h2 class="section-heading" style="margin-top: 30px;">Selected Projects</h2>
               </td>
             </tr>
           </tbody></table>
           
           <table style="width:100%;border:0px;border-spacing:0px 20px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            
+            <tr onmouseout="nmt_stop()" onmouseover="nmt_start()">
+              <td style="padding:16px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='nmt_image'><img src='images/nmt.png' class="project-img"></div>
+                  <img src='images/nmt.png' class="project-img">
+                </div>
+                <script type="text/javascript">
+                  function nmt_start() { document.getElementById('nmt_image').style.opacity = "1"; }
+                  function nmt_stop() { document.getElementById('nmt_image').style.opacity = "0"; }
+                  nmt_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:75%;vertical-align:middle">
+                <span class="papertitle" style="font-weight: 600; font-size: 16px;">Seq2Seq Neural Machine Translation (Chinese to English)</span>
+                <br>
+                <div style="margin-top: 5px; color: #444;">Core Developer</div>
+                <div style="font-style: italic; color: #666;">Deep Learning Course Project, 2025</div>
+                <p style="font-size: 14px; margin-top: 8px; color: #555;">
+                  Built a NMT system using <strong>Seq2Seq</strong> and <strong>Transformer</strong> with Attention mechanisms. Responsible for data cleaning/augmentation and model performance evaluation using <strong>PyTorch</strong>.
+                </p>
+              </td>
+            </tr>
+
             <tr onmouseout="micro_stop()" onmouseover="micro_start()">
               <td style="padding:16px;width:25%;vertical-align:middle">
                 <div class="one">
-                  <div class="two" id='micro_image'>
-                    <img src='images/microservice.png' style="width:100%; height:110px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
-                  </div>
-                  <img src='images/microservice.png' style="width:100%; height:110px; object-fit: cover; border-radius: 6px; border: 1px solid #eee;">
+                  <div class="two" id='micro_image'><img src='images/microservice.png' class="project-img"></div>
+                  <img src='images/microservice.png' class="project-img">
                 </div>
                 <script type="text/javascript">
                   function micro_start() { document.getElementById('micro_image').style.opacity = "1"; }
@@ -207,26 +228,68 @@
                 </script>
               </td>
               <td style="padding:8px;width:75%;vertical-align:middle">
-                <a href="#" style="text-decoration: none; color: #000;">
-                  <span class="papertitle" style="font-weight: 600; font-size: 16px;">High-Concurrency Microservices Platform</span>
-                </a>
+                <span class="papertitle" style="font-weight: 600; font-size: 16px;">High-Concurrency Microservices Platform</span>
                 <br>
                 <div style="margin-top: 5px; color: #444;">Project Leader</div>
-                <div style="font-style: italic; color: #666;">Course Project, 2024</div>
-                <div style="margin-top: 5px;">
-                   <a href="#" style="color: #0066cc;">code</a>
-                </div>
+                <div style="font-style: italic; color: #666;">Software Competition, 2024</div>
                 <p style="font-size: 14px; margin-top: 8px; color: #555;">
-                  Microservices architecture using <strong>Spring Cloud Alibaba</strong>. Capable of handling <strong>10k+ QPS</strong> scenarios.
+                  Microservices architecture using <strong>Spring Cloud Alibaba</strong>. Implemented traffic control with Sentinel, handling <strong>10k+ QPS</strong> scenarios.
                 </p>
               </td>
             </tr>
+
+            <tr onmouseout="tetris_stop()" onmouseover="tetris_start()">
+              <td style="padding:16px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='tetris_image'><img src='images/tetris.png' class="project-img"></div>
+                  <img src='images/tetris.png' class="project-img">
+                </div>
+                <script type="text/javascript">
+                  function tetris_start() { document.getElementById('tetris_image').style.opacity = "1"; }
+                  function tetris_stop() { document.getElementById('tetris_image').style.opacity = "0"; }
+                  tetris_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:75%;vertical-align:middle">
+                <span class="papertitle" style="font-weight: 600; font-size: 16px;">Tetris Game System Design</span>
+                <br>
+                <div style="margin-top: 5px; color: #444;">Core Developer</div>
+                <div style="font-style: italic; color: #666;">C++ Programming Project</div>
+                <p style="font-size: 14px; margin-top: 8px; color: #555;">
+                  Developed a complete game using <strong>C++</strong> and <strong>EasyX</strong>. Implemented core logic including <strong>bitwise shape encoding</strong>, "Wall Kick" collision detection, and anti-shake input handling.
+                </p>
+              </td>
+            </tr>
+
+            <tr onmouseout="schedule_stop()" onmouseover="schedule_start()">
+              <td style="padding:16px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='schedule_image'><img src='images/schedule.png' class="project-img"></div>
+                  <img src='images/schedule.png' class="project-img">
+                </div>
+                <script type="text/javascript">
+                  function schedule_start() { document.getElementById('schedule_image').style.opacity = "1"; }
+                  function schedule_stop() { document.getElementById('schedule_image').style.opacity = "0"; }
+                  schedule_stop()
+                </script>
+              </td>
+              <td style="padding:8px;width:75%;vertical-align:middle">
+                <span class="papertitle" style="font-weight: 600; font-size: 16px;">Teacher Schedule Mini-program</span>
+                <br>
+                <div style="margin-top: 5px; color: #444;">Full Stack Developer</div>
+                <div style="font-style: italic; color: #666;">Application Development</div>
+                <p style="font-size: 14px; margin-top: 8px; color: #555;">
+                  Designed a WeChat Mini-program for faculty schedule management. Features include visual course timetables, cloud-based data synchronization, and automated notifications.
+                </p>
+              </td>
+            </tr>
+
           </tbody></table>
 
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
               <td style="padding:0 20px;width:100%;vertical-align:middle">
-                <h2 class="section-heading" style="border-bottom: 1px solid #eaeaea; padding-bottom: 10px; margin-top: 30px;">Honors & Awards</h2>
+                <h2 class="section-heading" style="margin-top: 30px;">Honors & Awards</h2>
                 <ul style="padding-left: 20px; list-style-type: none; margin-bottom: 50px;">
                   <li style="margin-bottom: 8px; position: relative;">
                     <span style="position: absolute; left: -20px; color: #888;">•</span>
